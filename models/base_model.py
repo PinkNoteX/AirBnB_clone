@@ -2,7 +2,7 @@
 """ the base model """
 from uuid import uuid4
 from datetime import datetime
-
+from models import storage
 
 class BaseModel:
     """ the class """
@@ -13,6 +13,7 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             self.save()
+            storage.new(self)
         else:
             kwargs['created_at'] = datetime.strptime(kwargs['created_at'],
                                                      '%Y-%m-%dT%H:%M:%S.%f')
@@ -29,6 +30,7 @@ class BaseModel:
     def save(self):
         """ save current to obj """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """ to dictinary """

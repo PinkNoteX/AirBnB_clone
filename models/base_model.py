@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ the base model """
 from uuid import uuid4
-from deltatime import deltatime
+from datetime import datetime
 
 
 class BaseModel:
@@ -10,8 +10,8 @@ class BaseModel:
         """ init """
         if not kwargs:
             self.id = str(uuid4())
-            self.created_at = deltatime.now()
-            self.updated_at = deltatime.now()
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
             self.save()
         else:
             kwargs['created_at'] = datetime.strptime(kwargs['created_at'],
@@ -28,7 +28,7 @@ class BaseModel:
 
     def save(self):
         """ save current to obj """
-        self.updated_at = deltatime.now()
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         """ to dictinary """

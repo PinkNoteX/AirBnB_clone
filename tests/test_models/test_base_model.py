@@ -2,7 +2,7 @@
 import unittest
 from models.base_model import BaseModel
 from uuid import UUID
-from datetime import datetime
+import datetime
 
 
 class TestBaseModel(unittest.TestCase):

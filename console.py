@@ -3,10 +3,13 @@
 import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
+
+
 class HBNBCommand(cmd.Cmd):
     """ hbnbcommand class """
     prompt = '(hbnb) '
     classes = {"BaseModel": BaseModel}
+
     def do_EOF(self, command):
         """ EOF Handeling """
         print()
@@ -27,8 +30,6 @@ class HBNBCommand(cmd.Cmd):
     def help_quit(self):
         """ quit help """
         print('Quit command to exit the program\n')
-
-
 
 
 if __name__ == '__main__':

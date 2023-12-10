@@ -4,16 +4,32 @@ import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
 from models.user import User
+from models.place import Place
+from models.city import City
+from models.amenity import Amenity
+from models.state import State
+from models.review import Review
+
 
 Class_Dict = {"BaseModel": BaseModel,
-              "User": User}
+              "User": User,
+              "Place": Place,
+              "City": City,
+              "Amenity": Amenity,
+              "State": State,
+              "Review": Review}
 
 
 class HBNBCommand(cmd.Cmd):
     """ hbnbcommand class """
     prompt = '(hbnb) '
     classes = {"BaseModel": BaseModel,
-               "User": User}
+               "User": User,
+               "Place": Place,
+               "City": City,
+               "Amenity": Amenity,
+               "State": State,
+               "Review": Review}
 
     def do_EOF(self, command):
         """ EOF Handeling """

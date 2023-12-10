@@ -6,14 +6,14 @@ from models.__init__ import storage
 from models.user import User
 
 Class_Dict = {"BaseModel": BaseModel,
-                "User": User}
+              "User": User}
 
 
 class HBNBCommand(cmd.Cmd):
     """ hbnbcommand class """
     prompt = '(hbnb) '
     classes = {"BaseModel": BaseModel,
-                "User": User}
+               "User": User}
 
     def do_EOF(self, command):
         """ EOF Handeling """

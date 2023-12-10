@@ -6,6 +6,8 @@ from models.__init__ import storage
 
 
 Class_Dict = {"BaseModel": BaseModel}
+
+
 class HBNBCommand(cmd.Cmd):
     """ hbnbcommand class """
     prompt = '(hbnb) '
@@ -103,7 +105,7 @@ class HBNBCommand(cmd.Cmd):
         """ destroy help """
         print('Destroy command to show delete an instance based\
             on class name and id\n')
-        
+
     def do_all(self, arg):
         """ print all """
         n_list = []

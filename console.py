@@ -3,15 +3,17 @@
 import cmd
 from models.base_model import BaseModel
 from models.__init__ import storage
+from models.user import User
 
-
-Class_Dict = {"BaseModel": BaseModel}
+Class_Dict = {"BaseModel": BaseModel,
+                "User": User}
 
 
 class HBNBCommand(cmd.Cmd):
     """ hbnbcommand class """
     prompt = '(hbnb) '
-    classes = {"BaseModel": BaseModel}
+    classes = {"BaseModel": BaseModel,
+                "User": User}
 
     def do_EOF(self, command):
         """ EOF Handeling """

@@ -6,6 +6,7 @@ from models.engine.file_storage import FileStorage
 from models import storage
 import os
 
+
 class TesFileStorage(unittest.TestCase):
     """ test storage """
     def __init__(self, *args, **kwargs):
@@ -32,7 +33,7 @@ class TesFileStorage(unittest.TestCase):
         """ destroy json """
         try:
             os.remove('file.json')
-        except:
+        except Exception:
             pass
 
     def test_file_empty(self):

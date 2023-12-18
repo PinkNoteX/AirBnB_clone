@@ -81,13 +81,16 @@
 
 .user h4 {
     margin-left: 5px;
-    margin-bottom: 0;
 }
 
-.user h3 {
+.user h3, .user h4 {
     margin-bottom: 0;
 }
 
 .description {
     text-align: left;
+}
+
+.max_guest h4, .number_rooms h4, .number_bathrooms h4 {
+    margin: 5px;
 }

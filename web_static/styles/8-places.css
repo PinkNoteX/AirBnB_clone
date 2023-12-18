@@ -31,6 +31,7 @@
     height: 60px;
     font-size: 30px;
     position: absolute;
+    padding: 4px;
     right: 20px;
     top: 20px;
     color: #FF5A5F;
@@ -85,11 +86,15 @@
 }
 
 .user h3{
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 
 .description {
     text-align: left;
+}
+
+.description h4 {
+    margin-bottom: 15px;
 }
 
 .max_guest h4, .number_rooms h4, .number_bathrooms h4 {

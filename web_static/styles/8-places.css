@@ -14,7 +14,9 @@
 .places article {
     border: 1px solid #FF5A5F;
     border-radius: 4px;
-    display: flex;
+    display: inline-block;
+    text-align: center;
+    position: relative;
     justify-content: center;
     width: 390px;
     padding: 20px;
